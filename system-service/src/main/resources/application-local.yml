@@ -1,0 +1,24 @@
+application:
+  token-on: false
+spring:
+  datasource:
+    url: jdbc:h2:file:D:/datas/h2;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1
+  redis:
+    host: localhost
+    port: 6379
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: true
+        web-allow-others: true

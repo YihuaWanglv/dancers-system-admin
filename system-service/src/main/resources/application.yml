@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+  data:
+    rest:
+      defaultMediaType: application/json
+    web:
+      pageable:
+#        size-parameter: size
+#        page-parameter: page
+        default-page-size: 20
+        one-indexed-parameters: true
+        max-page-size: 2000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+server:
+  port: 8010
+springdoc:
+  swagger-ui:
+    path: /api-docs.html
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
